@@ -1,0 +1,21 @@
+{
+  "name": "Instagram downloader",
+  "version": "1.0",
+  "description": "Download image from instagram page",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action" :
+  {
+    "default_icon" : "icon-48.png",
+    "default_title" : "Ready to download"
+  },
+  "permissions" : [
+    "declarativeContent","tabs"
+  ],
+  "icons" : {
+    "48" : "icon-48.png"
+  },
+  "manifest_version": 2
+}
