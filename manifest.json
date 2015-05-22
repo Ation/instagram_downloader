@@ -15,7 +15,7 @@
     "default_title" : "Ready to download"
   },
   "permissions" : [
-    "declarativeContent","tabs","contentSettings","http://*/*", "https://*/*", "activeTab"
+    "declarativeContent","tabs","contentSettings","http://*/*", "https://*/*", "activeTab", "downloads"
   ],
   "icons" : {
     "48" : "icon-48.png"

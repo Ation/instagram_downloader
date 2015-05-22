@@ -10,7 +10,7 @@ var displayPageAction = function (tabId, changeInfo, tab) {
 chrome.tabs.onUpdated.addListener(displayPageAction);
 
 function downloadFile(downloadURL) {
-    console.log("I received the following DOM content:\n" + downloadURL);
+    chrome.downloads.download({url: downloadURL}, function(id) {} );
 }
 
 chrome.pageAction.onClicked.addListener(function(tab){
