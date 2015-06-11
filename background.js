@@ -10,6 +10,7 @@ var displayPageAction = function (tabId, changeInfo, tab) {
 chrome.tabs.onUpdated.addListener(displayPageAction);
 
 function downloadFile(downloadURL) {
+    chrome.extension.getBackgroundPage().console.log("Download: " + downloadURL);
     chrome.downloads.download({url: downloadURL}, function(id) {} );
 }
 

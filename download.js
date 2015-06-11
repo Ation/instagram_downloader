@@ -1,27 +1,15 @@
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
     if (msg.text && (msg.text == "download_media")) {
-      var type = ''
-      var type_properties = document.querySelectorAll('head meta[property="og:type"]');
-      if (type_properties.length == 1) {
-        type = type_properties[0].content;
+      var video_tag = document.querySelectorAll('video');
+      var download_link = '';
+
+      if (video_tag.length == 1) {
+        download_link = video_tag[0].getAttribute("src");
+      } else {
+        divs = document.body.querySelectorAll('div.-cx-PRIVATE-Photo__root')
+        download_link = divs[divs.length - 1].getAttribute('src');
       }
 
-      var downloadLink = ''
-      switch(type) {
-      case "video":
-        downloadLink = document.querySelectorAll('head meta[property="og:'+ 'video' +'"]')[0].content;
-        break;
-      case "profile":
-      case "instapp:photo":
-      default:
-        downloadLink = document.body.querySelectorAll(".lfFrame")[0].getAttribute("src");
-        if (downloadLink === null) {
-          downloadLink = document.body.querySelectorAll(".utiImage")[0].getAttribute("src");
-        }
-        break;
-        //
-      }
-
-      sendResponse( downloadLink );
+      sendResponse(download_link);
     }
 });
