@@ -6,9 +6,8 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       if (video_tag.length == 1) {
         download_link = video_tag[0].getAttribute("src");
       } else {
-        root = document.body.querySelectorAll('div.-cx-PRIVATE-Photo__root.-cx-PRIVATE-Post__media')
-        placeholder = root[0].getElementsByClassName('-cx-PRIVATE-Photo__placeholder')
-        img = placeholder[0].getElementsByTagName('img')
+        root = document.body.querySelectorAll('div.-cx-PRIVATE-Modal__contents')
+        img = root[0].querySelectorAll('img.-cx-PRIVATE-Photo__image')
         download_link = img[0].getAttribute('src');
       }
 
