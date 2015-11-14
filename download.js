@@ -6,7 +6,10 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       if (video_tag.length == 1) {
         download_link = video_tag[0].getAttribute("src");
       } else {
-        root = document.body.querySelectorAll('div.-cx-PRIVATE-Modal__contents')
+        root = document.body.querySelectorAll('div.-cx-PRIVATE-Photo__root.-cx-PRIVATE-Post__media')
+        if (root.length == 0) {
+            root = document.body.querySelectorAll('div.-cx-PRIVATE-Photo__root.-cx-PRIVATE-PhotoWithUserTags__photo')
+        }
         img = root[0].querySelectorAll('img.-cx-PRIVATE-Photo__image')
         download_link = img[0].getAttribute('src');
       }
