@@ -1,6 +1,6 @@
 var displayPageAction = function (tabId, changeInfo, tab) {
   if (changeInfo.status == 'complete') {
-    if (tab.url.match("^https?://instagram.com/.")) {
+    if (tab.url.match("^https?://(www\.)?instagram.com/.")) {
       //chrome.extension.getBackgroundPage().console.log(tab.url);
       chrome.pageAction.show(tabId);
     }

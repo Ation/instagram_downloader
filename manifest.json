@@ -1,12 +1,12 @@
 {
   "name": "Instagram image downloader",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Download image or video from instagram page",
   "background": {
     "scripts": ["background.js"]
   },
   "content_scripts": [{
-        "matches": ["*://instagram.com/*"],
+        "matches": ["*://instagram.com/*", "*://www.instagram.com/*"],
         "js":      ["download.js"]
     }],
   "page_action" :
