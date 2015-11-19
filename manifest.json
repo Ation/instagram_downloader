@@ -1,6 +1,6 @@
 {
   "name": "Instagram image downloader",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Download image or video from instagram page",
   "background": {
     "scripts": ["background.js"]
@@ -11,14 +11,14 @@
     }],
   "page_action" :
   {
-    "default_icon" : "icon-48.png",
+    "default_icon" : "icon-128.png",
     "default_title" : "Ready to download"
   },
   "permissions" : [
     "declarativeContent","tabs","contentSettings","http://*/*", "https://*/*", "activeTab", "downloads"
   ],
   "icons" : {
-    "48" : "icon-48.png"
+    "128" : "icon-128.png"
   },
   "manifest_version": 2
 }
