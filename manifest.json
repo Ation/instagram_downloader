@@ -1,6 +1,6 @@
 {
   "name": "Instagram image downloader",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Download image or video from instagram page",
   "background": {
     "scripts": ["background.js"]
